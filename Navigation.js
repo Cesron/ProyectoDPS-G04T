@@ -24,7 +24,7 @@ function Mtabs() {
 			<Tab.Screen name='Home' component={HomeScreen} options={{tabBarIcon:({}) =>(<Ionicons name="home-sharp" size={24} color="black" />)}}/>
 			<Tab.Screen name='Catalogo' component={CatalogoScreen}  options={{tabBarIcon:({}) =>(<Ionicons name="pricetags" size={24} color="black" />)}}/>
 			<Tab.Screen name='Historial' component={HistorialScreen} options={{tabBarIcon:({}) =>(<Ionicons name="ios-newspaper" size={24} color="black" />)}}/>
-			<Tab.Screen name='Pedidos' component={PedidosScreen} options={{tabBarIcon:({}) =>(<Ionicons name="home-sharp" size={24} color="black" />)}}/>
+			<Tab.Screen name='Pedidos' component={PedidosScreen} options={{tabBarIcon:({}) =>(<Ionicons name="cart-sharp" size={24} color="black" />)}}/>
 		</Tab.Navigator>
 	);
  }
