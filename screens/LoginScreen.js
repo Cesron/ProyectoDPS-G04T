@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as eva from '@eva-design/eva';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import {
 	ApplicationProvider,
 	Button,
@@ -10,18 +10,42 @@ import {
 } from '@ui-kitten/components';
 import { Ionicons } from '@expo/vector-icons';
 import { TouchableWithoutFeedback } from '@ui-kitten/components/devsupport';
+import {
+	createUserWithEmailAndPassword,
+	signInWithEmailAndPassword,
+} from 'firebase/auth';
+import { useAuthContext } from '../context/AuthContext';
+import { auth } from '../firebase';
 
-export function LoginScreen({ navigation }) {
+export function LoginScreen() {
 	const [secureTextEntry, setsecureTextEntry] = useState(true);
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const { setLogged } = useAuthContext();
+
+	const handleSingUp = () => {
+		signInWithEmailAndPassword(auth, email, password)
+			.then(() => {
+				setLogged(true);
+			})
+			.catch(console.log);
+	};
+
+	const handleRegister = () => {
+		createUserWithEmailAndPassword,
+			(auth, email, password)
+				.then(() => {
+					setLogged(true);
+				})
+				.catch(console.log);
+	};
 
 	const renderIcon = () => (
 		<TouchableWithoutFeedback
 			onPress={() => setsecureTextEntry(!secureTextEntry)}
 		>
 			<Ionicons
-				name={secureTextEntry ? 'eye-off' : 'eye'}
+				name={secureTextEntry ? 'eye' : 'eye-off'}
 				size={24}
 				color='gray'
 			/>
@@ -48,9 +72,18 @@ export function LoginScreen({ navigation }) {
 					value={password}
 					onChangeText={(nextValue) => setPassword(nextValue)}
 				/>
-				<Button style={styles.m} onPress={() => navigation.navigate('Home')}>
-					¡Empezar!
-				</Button>
+				<View style={styles.buttons}>
+					<Button style={styles.m} onPress={handleSingUp}>
+						¡Ingresar!
+					</Button>
+					<Button
+						appearance='outline'
+						style={styles.m}
+						onPress={handleRegister}
+					>
+						¡Registrar!
+					</Button>
+				</View>
 			</Layout>
 		</ApplicationProvider>
 	);
@@ -65,5 +98,9 @@ const styles = StyleSheet.create({
 	},
 	m: {
 		marginTop: 20,
+		marginHorizontal: 10,
+	},
+	buttons: {
+		flexDirection: 'row',
 	},
 });
