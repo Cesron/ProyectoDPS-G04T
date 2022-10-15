@@ -8,6 +8,9 @@ import HomeScreen from './screens/HomeScreen';
 import CatalogoScreen from './screens/CatalogoScreen';
 import HistorialScreen from './screens/HistorialScreen';
 import PedidosScreen from './screens/PedidosScreen';
+
+//import ConexionScreen from './screens/ConexionScreen';
+
 import { setStatusBarBackgroundColor } from 'expo-status-bar';
 
 

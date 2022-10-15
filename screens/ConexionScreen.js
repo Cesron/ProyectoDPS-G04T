@@ -1,24 +1,25 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity} from "react-native";
+import { Image, View, Text, StyleSheet, TouchableOpacity} from "react-native";
 
 const ConexionScreen = () => {
 
 	return (
 		<View style={styles.contenedor}>
 			<View style={styles.iconoContenedor}>
-				<Image style={styles.icono} source={require('../assets/cart-outline.png')}/>
+				<Image style={styles.icono} source={require('../assets/wifi-off.png')}/>
 			</View>
 			
 			<View style={styles.contenido}>
-			<Text style={styles.etiqueta}>No hay pedidos</Text>
+			<Text style={styles.etiqueta}>No hay Conexion a internet</Text>
 			</View>
 			<View style={styles.contenedorBtn}>
 			<TouchableOpacity style={styles.boton} >
-				<Text style={styles.etiquetaBtn}>Realizar pedido</Text>
+				<Text style={styles.etiquetaBtn}>Volver a intentarlo...</Text>
 			</TouchableOpacity>
 			</View>
 		</View>
 	);
+}
 
 	const styles = StyleSheet.create({
 		etiqueta:{
@@ -52,5 +53,5 @@ const ConexionScreen = () => {
 			color: '#fff'
 		}
 	});
-}
+
 export default ConexionScreen;
