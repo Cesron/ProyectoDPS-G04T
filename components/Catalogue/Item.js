@@ -24,8 +24,11 @@ export const Item = ({ image, name, price }) => {
 	return (
 		<View style={styles.grid}>
 		
-				<Text> 
+		<Text> 
 					{CatalogueData[0].name}
+				 </Text>
+				 <Text> 
+					{CatalogueData[0].price}
 				 </Text>
 
 				 

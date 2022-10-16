@@ -5,6 +5,7 @@ import LoginStack from './components/LoginStack';
 import Navigation from './components/Navigation';
 import { AuthContext, AuthContextProvider } from './context/AuthContext';
 import { ProductoScreen } from './screens/ProductoScreen';
+import { testScreen } from './screens/testScreen';
 
 
 
