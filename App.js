@@ -10,7 +10,7 @@ export default function App() {
 		<ApplicationProvider {...eva} theme={eva.dark}>
 			<AuthContextProvider>
 				<AuthContext.Consumer>
-					{({ logged }) => (false ? <LoginStack /> : <Navigation />)}
+					{({ logged }) => (!logged ? <LoginStack /> : <Navigation />)}
 				</AuthContext.Consumer>
 			</AuthContextProvider>
 		</ApplicationProvider>
