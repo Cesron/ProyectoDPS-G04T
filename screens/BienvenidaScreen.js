@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { Button, Layout, Text } from '@ui-kitten/components';
 import AnimatedLottieView from 'lottie-react-native';
 
-export function BienvenidaScreen({ navigation }) {
+export const BienvenidaScreen = ({ navigation }) => {
 	return (
 		<Layout style={styles.layout}>
 			<Text category='h1' style={styles.title}>
@@ -24,7 +24,7 @@ export function BienvenidaScreen({ navigation }) {
 			</Button>
 		</Layout>
 	);
-}
+};
 
 const styles = StyleSheet.create({
 	layout: {

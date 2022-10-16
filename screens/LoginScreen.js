@@ -10,7 +10,7 @@ import {
 	signInWithEmailAndPassword,
 } from 'firebase/auth';
 
-export function LoginScreen() {
+export const LoginScreen = () => {
 	const [secureTextEntry, setsecureTextEntry] = useState(true);
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
@@ -73,7 +73,7 @@ export function LoginScreen() {
 			</View>
 		</Layout>
 	);
-}
+};
 
 const styles = StyleSheet.create({
 	layout: {
