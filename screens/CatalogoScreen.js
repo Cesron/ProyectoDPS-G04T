@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const CatalogoScreen = () => {
+export const CatalogoScreen = () => {
 	return (
 		<View>
 			<Text
@@ -14,4 +14,3 @@ const CatalogoScreen = () => {
 		</View>
 	);
 };
-export default CatalogoScreen;
