@@ -32,12 +32,11 @@ export function LoginScreen() {
 	};
 
 	const handleRegister = () => {
-		createUserWithEmailAndPassword,
-			(auth, email, password)
-				.then(() => {
-					setLogged(true);
-				})
-				.catch(console.log);
+		createUserWithEmailAndPassword(auth, email, password)
+			.then(() => {
+				setLogged(true);
+			})
+			.catch(console.log);
 	};
 
 	const renderIcon = () => (
