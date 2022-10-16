@@ -1,6 +1,12 @@
 import { Input, Layout } from '@ui-kitten/components';
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import {
+	View,
+	Text,
+	StyleSheet,
+	TouchableOpacity,
+	ScrollView,
+} from 'react-native';
 import { Item } from '../components/Catalogue/Item';
 
 export const CatalogoScreen = () => {
@@ -9,13 +15,13 @@ export const CatalogoScreen = () => {
 			<View>
 				<Input placeholder='Buscar producto' />
 			</View>
-			<View>
+			<ScrollView>
 				<Item
 					name='Prueba texto'
 					image={require('../images/cuidado-personal.png')}
 					price='$500'
 				/>
-			</View>
+			</ScrollView>
 		</Layout>
 	);
 };
