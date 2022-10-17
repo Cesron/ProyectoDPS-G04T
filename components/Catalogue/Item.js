@@ -23,18 +23,13 @@ const styles = StyleSheet.create({
 export const Item = ({ image, name, price }) => {
 	return (
 		<View style={styles.grid}>
-		
-		<Text> 
-					{CatalogueData[0].name}
-				 </Text>
-				 <Text> 
-					{CatalogueData[0].price}
-				 </Text>
-
-				 
-				<Text> 
-					{CatalogueData[0].description}
-				 </Text>
+			{CatalogueData.map(({ image, name, price }, key) => (
+				<View key={key} style={styles.container}>
+					<Image source={image} style={styles.image} />
+					<Text> {name} </Text>
+					<Text> {price} </Text>
+				</View>
+			))}
 		</View>
 	);
 };
