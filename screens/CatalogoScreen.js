@@ -1,5 +1,10 @@
-import { Input, Layout } from '@ui-kitten/components';
-import React from 'react';
+import {
+	Autocomplete,
+	AutocompleteItem,
+	Input,
+	Layout,
+} from '@ui-kitten/components';
+import React, { useState } from 'react';
 import {
 	View,
 	Text,
@@ -8,12 +13,39 @@ import {
 	ScrollView,
 } from 'react-native';
 import { Item } from '../components/Catalogue/Item';
+import { AutocompleteData } from '../data/AutocompleteData';
+
+const filter = (item, query) =>
+	item.title.toLowerCase().includes(query.toLowerCase());
 
 export const CatalogoScreen = () => {
+	const [value, setValue] = useState(null);
+	const [data, setData] = useState(AutocompleteData);
+
+	const onSelect = (index) => {
+		setValue(AutocompleteData[index].title);
+	};
+
+	const onChangeText = (query) => {
+		setValue(query);
+		setData(AutocompleteData.filter((item) => filter(item, query)));
+	};
+
+	const renderOption = (item, index) => (
+		<AutocompleteItem key={index} title={item.title} />
+	);
 	return (
 		<Layout style={styles.layout}>
 			<View>
-				<Input placeholder='Buscar producto' />
+				<Autocomplete
+					placeholder='Buscar producto'
+					style={styles.input}
+					value={value}
+					onSelect={onSelect}
+					onChangeText={onChangeText}
+				>
+					{data.map(renderOption)}
+				</Autocomplete>
 			</View>
 			<ScrollView>
 				<Item
@@ -32,5 +64,10 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 		padding: 20,
+	},
+	input: {
+		marginTop: 30,
+		marginBottom: 30,
+		width: 400,
 	},
 });
