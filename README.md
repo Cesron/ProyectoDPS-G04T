@@ -13,9 +13,15 @@ TIENDA PARA LA ABUELA
 El proyecto consiste en solucionar la problematica de la compra de abarrotes y minimizar el tiempo en tienda, también reduciría el porcenteja de error humano al momento de hacer compras.
 
 -- Links de Zona de trabajo.
-TRELLO: https://trello.com/b/RCq0BbKm/tienda-para-la-abuela
+- TRELLO: https://trello.com/b/RCq0BbKm/tienda-para-la-abuela
 
-Mockups y diseños UIX: https://www.figma.com/file/FHTGH7oI8qtLUbayA26N3T/Untitled?node-id=0%3A1
+- Mockups y diseños UIX: https://www.figma.com/file/FHTGH7oI8qtLUbayA26N3T/Untitled?node-id=0%3A1
+
+- Manual Técnico: https://www.canva.com/design/DAFPQ8PKo8A/PckDLerHT7NPQ48X-dg4Ag/view?utm_content=DAFPQ8PKo8A&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu
+
+- Manual de Usuario: https://www.canva.com/design/DAFPRL7fqeA/w3lfzPeKNIre_HsEacTXSg/view?utm_content=DAFPRL7fqeA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
+
+- Video Presentación: https://drive.google.com/file/d/1U6zDeMkSvKkNTuO1KlrZr7RkXaiE-HA5/view?usp=sharing
 
 Licencias Creative Commons: 
 
