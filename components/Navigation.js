@@ -9,6 +9,7 @@ import {
 	HomeScreen,
 	PedidosScreen,
 } from '../screens';
+import CatalogueStack from './CatalogueStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -32,7 +33,7 @@ function Mtabs() {
 			/>
 			<Tab.Screen
 				name='Catalogo'
-				component={CatalogoScreen}
+				component={CatalogueStack}
 				options={{
 					tabBarIcon: ({}) => (
 						<Ionicons name='pricetags' size={24} color='black' />

@@ -1,6 +1,11 @@
 import { Avatar, Text } from '@ui-kitten/components';
 import React from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import {
+	View,
+	Image,
+	StyleSheet,
+	TouchableWithoutFeedback,
+} from 'react-native';
 import { AutocompleteData } from '../../data/AutocompleteData';
 import { CatalogueData } from '../../data/CatalogueData';
 
@@ -35,20 +40,24 @@ const styles = StyleSheet.create({
 	},
 });
 
-export const Item = ({ image, name, price }) => {
+export const Item = ({ navigation }) => {
 	return (
 		<View style={styles.grid}>
 			{CatalogueData.map(({ image, name, price }, key) => (
-				<View key={key} style={styles.container}>
-					<Image source={image} style={styles.image} />
-					<Text style={styles.name} category={'h5'}>
-						{' '}
-						{name}{' '}
-					</Text>
-					<Text style={styles.price}> $ {price} </Text>
-				</View>
+				<TouchableWithoutFeedback
+					key={key}
+					onPress={() => navigation.navigate('ProductoScreen')}
+				>
+					<View style={styles.container}>
+						<Image source={image} style={styles.image} />
+						<Text style={styles.name} category={'h5'}>
+							{' '}
+							{name}{' '}
+						</Text>
+						<Text style={styles.price}> $ {price} </Text>
+					</View>
+				</TouchableWithoutFeedback>
 			))}
-			<Text>{JSON.stringify(AutocompleteData)}</Text>
 		</View>
 	);
 };

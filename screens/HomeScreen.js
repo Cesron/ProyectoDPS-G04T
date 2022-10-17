@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
 	layout: { flex: 1, justifyContent: 'center', alignItems: 'center' },
 	textStyle: {
 		fontSize: 45,
-		fontFamily: 'Arial Rounded MT Bold',
 		paddingTop: 10,
 		marginTop: 25,
 		paddingLeft: 10,
