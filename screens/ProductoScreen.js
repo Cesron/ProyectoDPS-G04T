@@ -1,4 +1,12 @@
-import { Input, Layout , Card,TopNavigation,TopNavigationAction, Button , Icon } from '@ui-kitten/components';
+import {
+	Input,
+	Layout,
+	Card,
+	TopNavigation,
+	TopNavigationAction,
+	Button,
+	Icon,
+} from '@ui-kitten/components';
 import { reload } from 'firebase/auth';
 import React from 'react';
 import {
@@ -7,93 +15,105 @@ import {
 	StyleSheet,
 	TouchableOpacity,
 	ScrollView,
-	ViewPager ,
+	ViewPager,
 	Avatar,
+	Image,
 } from 'react-native';
 //import { Item } from '../components/Catalogue/Item';
 import { CatalogueData } from '../data/CatalogueData';
+import { Ionicons } from '@expo/vector-icons';
 
-
-  
 const styles = StyleSheet.create({
-	details: {
-		flexDirection: 'row',
-		alignItems: 'center',
-		marginVertical: 4,
-	  },
-	  title: {
-		marginHorizontal: 8,
-	  },
 	name: {
-		color: "white",
+		color: 'white',
 		fontSize: 40,
-		fontStyle: 'italic',
-   		 fontWeight: 'bold'
 	},
 
 	price: {
-		color: "white",
+		color: 'white',
 		fontSize: 25,
+		fontWeight: 'bold',
 	},
 
-	descricion: {
-		color: "white",
+	description: {
+		color: '#C8CFE1',
+		fontSize: 18,
+		lineHeight: 32,
 	},
 	image: {
-		borderRadius: 100,
+		height: 600,
+		width: 600,
+		position: 'absolute',
 	},
-	card: {
-		margin: 2,
-	  },
-	layout: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		padding: 20,
-	},
-	container: {
-		minHeight: 128,
-	  },
 
+	layout: {
+		position: 'relative',
+		flex: 1,
+		justifyContent: 'space-around',
+		alignItems: 'flex-start',
+		marginTop: 500,
+		borderTopLeftRadius: 30,
+		borderTopRightRadius: 30,
+		paddingHorizontal: 40,
+	},
+	button: {
+		alignSelf: 'center',
+		width: '75%',
+		height: 65,
+		fontSize: 24,
+		borderRadius: 15,
+	},
+	heartButton: {
+		backgroundColor: 'white',
+		width: '20%',
+		marginRight: 20,
+		borderRadius: 15,
+	},
+	buttonsContainer: {
+		flexDirection: 'row',
+	},
+	priceView: {
+		flexDirection: 'row',
+	},
+	pricePieza: {
+		color: '#C8CFE1',
+		fontSize: 25,
+	},
 });
 
 export const ProductoScreen = () => {
 	return (
-
-
+		<>
+			<Image source={CatalogueData[0].image} style={styles.image} />
 			<Layout style={styles.layout}>
+				<View>
+					<Text style={styles.name}>{CatalogueData[0].name}</Text>
 
-					
-
-
-				<Card style={styles.card}
-				image={require('../images/carnes.png')}
-				status='primary'>
-					<Text>
-					The Maldives
-					</Text>
-
-				</Card>
-
-					<View style={styles.grid}>
-							<Text style={styles.name}> 
-								{CatalogueData[0].name}
-							</Text>
-
-							<Text style={styles.price}> 
-								{CatalogueData[0].price} USD/Pieza
-							</Text>
-					
-							<Text style={styles.descricion}> 
-								{CatalogueData[0].description}
-							</Text>
+					<View style={styles.priceView}>
+						<Text style={styles.price}>{CatalogueData[0].price} </Text>
+						<Text style={styles.pricePieza}> $ / pieza</Text>
 					</View>
+				</View>
 
+				<Text style={styles.description}>{CatalogueData[0].description}</Text>
 
-					<Button>Agregar al Carrito</Button>
-					
-
+				<View style={styles.buttonsContainer}>
+					<Button
+						style={styles.heartButton}
+						accessoryLeft={
+							<Ionicons name='heart-outline' size={20} color='#C8CFE1' />
+						}
+					></Button>
+					<Button
+						style={styles.button}
+						accessoryLeft={
+							<Ionicons name='cart-outline' size={20} color='white' />
+						}
+					>
+						Agregar al Carrito
+					</Button>
+				</View>
 			</Layout>
+		</>
 	);
 };
-

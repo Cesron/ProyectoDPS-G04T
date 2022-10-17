@@ -1,9 +1,10 @@
 export const CatalogueData = [
 	{
-		name: 'Pasta dental',
-		image: require('../images/abarrotes.png'),
+		name: 'Lechuga',
+		image: require('../images/Media.png'),
 		price: 4.5,
-		description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat eaque reprehenderit, repellat eveniet fugit tenetur recusandae ad distinctio, placeat unde hic! Optio voluptatem accusamus cupiditate laboriosam sunt vel quia velit?',
+		description:
+			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat eaque reprehenderit, repellat eveniet fugit tenetur recusandae ad distinctio, placeat unde hic! Optio voluptatem accusamus cupiditate laboriosam sunt vel quia velit?',
 	},
 	{
 		name: 'Aromas',

@@ -7,18 +7,14 @@ import { AuthContext, AuthContextProvider } from './context/AuthContext';
 import { ProductoScreen } from './screens/ProductoScreen';
 import { testScreen } from './screens/testScreen';
 
-
-
 export default function App() {
 	return (
 		<ApplicationProvider {...eva} theme={eva.dark}>
-			{/* <AuthContextProvider>
+			<AuthContextProvider>
 				<AuthContext.Consumer>
-					{({ logged }) => (!logged ? <LoginStack /> : <Navigation />)}
+					{({ logged }) => (false ? <LoginStack /> : <Navigation />)}
 				</AuthContext.Consumer>
-			</AuthContextProvider> */}
-
-		<ProductoScreen/>
+			</AuthContextProvider>
 		</ApplicationProvider>
 	);
 }

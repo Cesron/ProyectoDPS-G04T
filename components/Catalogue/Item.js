@@ -19,11 +19,11 @@ const styles = StyleSheet.create({
 	},
 	image: {
 		borderRadius: 500,
-		height: 200,
-		width: 200,
+		height: 100,
+		width: 100,
 	},
 	name: {
-		maxWidth: 200,
+		maxWidth: 100,
 		fontWeight: 'bold',
 		textAlign: 'center',
 		paddingTop: 15,
