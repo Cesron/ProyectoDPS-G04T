@@ -13,7 +13,7 @@ export const CatalogueData = [
 		description: 'Pasta dental para el cuido personal y la salud dental',
 	},
 	{
-		name: '3-Pack Gaseosas ',
+		name: '3 - Pack Gaseosas ',
 		image: require('../images/bebidas.png'),
 		price: 3.78,
 		description: 'Pasta dental para el cuido personal y la salud dental',
@@ -31,7 +31,7 @@ export const CatalogueData = [
 		description: 'Pasta dental para el cuido personal y la salud dental',
 	},
 	{
-		name: '6-Pack Latas de aceituna ',
+		name: '6 - Pack Cervezas ',
 		image: require('../images/SuperPacks.png'),
 		price: 8.5,
 		description: 'Pasta dental para el cuido personal y la salud dental',
@@ -49,7 +49,7 @@ export const CatalogueData = [
 		description: 'Pasta dental para el cuido personal y la salud dental',
 	},
 	{
-		name: '3-Pack Gaseosas ',
+		name: '3 - Pack Gaseosas ',
 		image: require('../images/bebidas.png'),
 		price: 3.78,
 		description: 'Pasta dental para el cuido personal y la salud dental',
@@ -67,7 +67,7 @@ export const CatalogueData = [
 		description: 'Pasta dental para el cuido personal y la salud dental',
 	},
 	{
-		name: '6-Pack Latas de aceituna ',
+		name: '6 - Pack Cervezas ',
 		image: require('../images/SuperPacks.png'),
 		price: 8.5,
 		description: 'Pasta dental para el cuido personal y la salud dental',
@@ -85,7 +85,7 @@ export const CatalogueData = [
 		description: 'Pasta dental para el cuido personal y la salud dental',
 	},
 	{
-		name: '3-Pack Gaseosas ',
+		name: '3 - Pack Gaseosas ',
 		image: require('../images/bebidas.png'),
 		price: 3.78,
 		description: 'Pasta dental para el cuido personal y la salud dental',
@@ -103,7 +103,7 @@ export const CatalogueData = [
 		description: 'Pasta dental para el cuido personal y la salud dental',
 	},
 	{
-		name: '6-Pack Latas de aceituna ',
+		name: '6 - Pack Cervezas ',
 		image: require('../images/SuperPacks.png'),
 		price: 8.5,
 		description: 'Pasta dental para el cuido personal y la salud dental',
