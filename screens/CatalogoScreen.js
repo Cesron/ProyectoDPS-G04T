@@ -1,18 +1,73 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity} from "react-native";
+import {
+	Autocomplete,
+	AutocompleteItem,
+	Input,
+	Layout,
+} from '@ui-kitten/components';
+import React, { useState } from 'react';
+import {
+	View,
+	Text,
+	StyleSheet,
+	TouchableOpacity,
+	ScrollView,
+} from 'react-native';
+import { Item } from '../components/Catalogue/Item';
+import { AutocompleteData } from '../data/AutocompleteData';
 
-const CatalogoScreen = () => {
+const filter = (item, query) =>
+	item.title.toLowerCase().includes(query.toLowerCase());
 
-	return (
-		<View>
-			<Text
-				style={{
-					fontSize:30,
-					textAlign: 'center',
-					marginTop: '204'
-				}}
-				>Catalogo</Text>
-		</View>
+export const CatalogoScreen = () => {
+	const [value, setValue] = useState(null);
+	const [data, setData] = useState(AutocompleteData);
+
+	const onSelect = (index) => {
+		setValue(AutocompleteData[index].title);
+	};
+
+	const onChangeText = (query) => {
+		setValue(query);
+		setData(AutocompleteData.filter((item) => filter(item, query)));
+	};
+
+	const renderOption = (item, index) => (
+		<AutocompleteItem key={index} title={item.title} />
 	);
-}
-export default CatalogoScreen;
+	return (
+		<Layout style={styles.layout}>
+			<View>
+				<Autocomplete
+					placeholder='Buscar producto'
+					style={styles.input}
+					value={value}
+					onSelect={onSelect}
+					onChangeText={onChangeText}
+				>
+					{data.map(renderOption)}
+				</Autocomplete>
+			</View>
+			<ScrollView>
+				<Item
+					name='Prueba texto'
+					image={require('../images/cuidado-personal.png')}
+					price='$500'
+				/>
+			</ScrollView>
+		</Layout>
+	);
+};
+
+const styles = StyleSheet.create({
+	layout: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		padding: 20,
+	},
+	input: {
+		marginTop: 30,
+		marginBottom: 30,
+		width: 400,
+	},
+});

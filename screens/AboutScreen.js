@@ -1,18 +1,16 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity} from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const AboutScreen = () => {
-
+export const AboutScreen = () => {
 	return (
 		<View>
 			<Text
 				style={{
-					fontSize:30,
-					textAlign: 'center',
-					marginTop: '204'
+					fontSize: 30,
 				}}
-				>About</Text>
+			>
+				About
+			</Text>
 		</View>
 	);
-}
-export default AboutScreen;
+};
