@@ -9,6 +9,7 @@ import {
 	HomeScreen,
 	PedidosScreen,
 } from '../screens';
+import CatalogueStack from './CatalogueStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,7 +18,15 @@ function Mtabs() {
 		<Tab.Navigator
 			initialRouteName='Home'
 			screenOptions={{
-				tabActivetintColor: 'purple',
+				tabBarStyle: {
+					backgroundColor: '#00047E',
+					height: 100,
+				},
+				tabBarActiveTintColor: '#18FF03',
+				tabBarInactiveTintColor: 'white',
+				tabBarLabelStyle:{
+					fontSize: 15,
+			},
 				headerShown: false,
 			}}
 		>
@@ -25,17 +34,18 @@ function Mtabs() {
 				name='Home'
 				component={HomeScreen}
 				options={{
-					tabBarIcon: ({}) => (
-						<Ionicons name='home-sharp' size={24} color='black' />
+					tabBarLabel: 'INICIO',
+					tabBarIcon: ({color}) => (
+							<Ionicons name="home" size={35} color={color} />
 					),
 				}}
 			/>
 			<Tab.Screen
 				name='Catalogo'
-				component={CatalogoScreen}
+				component={CatalogueStack}
 				options={{
-					tabBarIcon: ({}) => (
-						<Ionicons name='pricetags' size={24} color='black' />
+					tabBarIcon: ({color}) => (
+						<Ionicons name='pricetags' size={35} color={color} />
 					),
 				}}
 			/>
@@ -43,8 +53,8 @@ function Mtabs() {
 				name='Historial'
 				component={HistorialScreen}
 				options={{
-					tabBarIcon: ({}) => (
-						<Ionicons name='ios-newspaper' size={24} color='black' />
+					tabBarIcon: ({color}) => (
+						<Ionicons name='ios-newspaper' size={35} color={color} />
 					),
 				}}
 			/>
@@ -52,8 +62,8 @@ function Mtabs() {
 				name='Pedidos'
 				component={PedidosScreen}
 				options={{
-					tabBarIcon: ({}) => (
-						<Ionicons name='cart-sharp' size={24} color='black' />
+					tabBarIcon: ({color}) => (
+						<Ionicons name='cart-sharp' size={35} color={color} />
 					),
 				}}
 			/>

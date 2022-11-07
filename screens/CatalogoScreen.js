@@ -1,24 +1,13 @@
-import {
-	Autocomplete,
-	AutocompleteItem,
-	Input,
-	Layout,
-} from '@ui-kitten/components';
+import { Autocomplete, AutocompleteItem, Layout } from '@ui-kitten/components';
 import React, { useState } from 'react';
-import {
-	View,
-	Text,
-	StyleSheet,
-	TouchableOpacity,
-	ScrollView,
-} from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import { Item } from '../components/Catalogue/Item';
 import { AutocompleteData } from '../data/AutocompleteData';
 
 const filter = (item, query) =>
 	item.title.toLowerCase().includes(query.toLowerCase());
 
-export const CatalogoScreen = () => {
+export const CatalogoScreen = ({ navigation }) => {
 	const [value, setValue] = useState(null);
 	const [data, setData] = useState(AutocompleteData);
 
@@ -36,23 +25,18 @@ export const CatalogoScreen = () => {
 	);
 	return (
 		<Layout style={styles.layout}>
-			<View>
-				<Autocomplete
-					placeholder='Buscar producto'
-					style={styles.input}
-					value={value}
-					onSelect={onSelect}
-					onChangeText={onChangeText}
-				>
-					{data.map(renderOption)}
-				</Autocomplete>
-			</View>
+			<Autocomplete
+				placeholder='Buscar producto'
+				style={styles.input}
+				value={value}
+				onSelect={onSelect}
+				onChangeText={onChangeText}
+			>
+				{data.map(renderOption)}
+			</Autocomplete>
+
 			<ScrollView>
-				<Item
-					name='Prueba texto'
-					image={require('../images/cuidado-personal.png')}
-					price='$500'
-				/>
+				<Item navigation={navigation} />
 			</ScrollView>
 		</Layout>
 	);
@@ -66,8 +50,8 @@ const styles = StyleSheet.create({
 		padding: 20,
 	},
 	input: {
-		marginTop: 30,
+		marginTop: 40,
 		marginBottom: 30,
-		width: 400,
+		width: '100%',
 	},
 });

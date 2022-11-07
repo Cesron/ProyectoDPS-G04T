@@ -1,27 +1,9 @@
-import {
-	Input,
-	Layout,
-	Card,
-	TopNavigation,
-	TopNavigationAction,
-	Button,
-	Icon,
-} from '@ui-kitten/components';
-import { reload } from 'firebase/auth';
+import { Button, Layout } from '@ui-kitten/components';
 import React from 'react';
-import {
-	View,
-	Text,
-	StyleSheet,
-	TouchableOpacity,
-	ScrollView,
-	ViewPager,
-	Avatar,
-	Image,
-} from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 //import { Item } from '../components/Catalogue/Item';
-import { CatalogueData } from '../data/CatalogueData';
 import { Ionicons } from '@expo/vector-icons';
+import { CatalogueData } from '../data/CatalogueData';
 
 const styles = StyleSheet.create({
 	name: {
@@ -41,7 +23,7 @@ const styles = StyleSheet.create({
 		lineHeight: 32,
 	},
 	image: {
-		height: 600,
+		height: 400,
 		width: 600,
 		position: 'absolute',
 	},
@@ -51,7 +33,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: 'space-around',
 		alignItems: 'flex-start',
-		marginTop: 500,
+		marginTop: 300,
 		borderTopLeftRadius: 30,
 		borderTopRightRadius: 30,
 		paddingHorizontal: 40,
