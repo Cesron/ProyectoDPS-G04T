@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 //Screens
 import {
+	BienvenidaScreen,
 	CatalogoScreen,
 	HistorialScreen,
 	HomeScreen,
@@ -24,7 +25,7 @@ function Mtabs() {
 		>
 			<Tab.Screen
 				name='Home'
-				component={HomeScreen}
+				component={BienvenidaScreen}
 				options={{
 					tabBarIcon: ({}) => (
 						<Ionicons name='home-sharp' size={24} color='black' />

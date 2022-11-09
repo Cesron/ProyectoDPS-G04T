@@ -6,6 +6,7 @@ import {
 	StyleSheet,
 	TouchableWithoutFeedback,
 } from 'react-native';
+import { useAuthContext } from '../../context/AuthContext';
 import { AutocompleteData } from '../../data/AutocompleteData';
 import { CatalogueData } from '../../data/CatalogueData';
 
@@ -41,12 +42,22 @@ const styles = StyleSheet.create({
 });
 
 export const Item = ({ navigation }) => {
+	const { setProductView } = useAuthContext();
+
 	return (
 		<View style={styles.grid}>
-			{CatalogueData.map(({ image, name, price }, key) => (
+			{CatalogueData.map(({ image, name, price, description }, key) => (
 				<TouchableWithoutFeedback
 					key={key}
-					onPress={() => navigation.navigate('ProductoScreen')}
+					onPress={() => {
+						setProductView({
+							image: image,
+							name: name,
+							price: price,
+							description: description,
+						});
+						navigation.navigate('ProductoScreen');
+					}}
 				>
 					<View style={styles.container}>
 						<Image source={image} style={styles.image} />

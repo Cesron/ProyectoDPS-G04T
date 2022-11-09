@@ -3,7 +3,8 @@ import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 //import { Item } from '../components/Catalogue/Item';
 import { Ionicons } from '@expo/vector-icons';
-import { CatalogueData } from '../data/CatalogueData';
+import { CatalogueData as productView } from '../data/CatalogueData';
+import { useAuthContext } from '../context/AuthContext';
 
 const styles = StyleSheet.create({
 	name: {
@@ -64,20 +65,22 @@ const styles = StyleSheet.create({
 });
 
 export const ProductoScreen = () => {
+	const { productView } = useAuthContext();
+
 	return (
 		<>
-			<Image source={CatalogueData[0].image} style={styles.image} />
+			<Image source={productView.image} style={styles.image} />
 			<Layout style={styles.layout}>
 				<View>
-					<Text style={styles.name}>{CatalogueData[0].name}</Text>
+					<Text style={styles.name}>{productView.name}</Text>
 
 					<View style={styles.priceView}>
-						<Text style={styles.price}>{CatalogueData[0].price} </Text>
+						<Text style={styles.price}>{productView.price} </Text>
 						<Text style={styles.pricePieza}> $ / pieza</Text>
 					</View>
 				</View>
 
-				<Text style={styles.description}>{CatalogueData[0].description}</Text>
+				<Text style={styles.description}>{productView.description}</Text>
 
 				<View style={styles.buttonsContainer}>
 					<Button
