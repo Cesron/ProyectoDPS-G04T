@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
 });
 
 export const ProductoScreen = () => {
-	const { productView } = useAuthContext();
+	const { productView, car, setCar } = useAuthContext();
 
 	return (
 		<>
@@ -73,7 +73,6 @@ export const ProductoScreen = () => {
 			<Layout style={styles.layout}>
 				<View>
 					<Text style={styles.name}>{productView.name}</Text>
-
 					<View style={styles.priceView}>
 						<Text style={styles.price}>{productView.price} </Text>
 						<Text style={styles.pricePieza}> $ / pieza</Text>
@@ -94,6 +93,9 @@ export const ProductoScreen = () => {
 						accessoryLeft={
 							<Ionicons name='cart-outline' size={20} color='white' />
 						}
+						onPress={() => {
+							setCar((prev) => [...prev, productView]);
+						}}
 					>
 						Agregar al Carrito
 					</Button>
