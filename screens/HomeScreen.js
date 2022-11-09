@@ -1,50 +1,19 @@
 import { Layout, Text } from '@ui-kitten/components';
-import React, { useEffect, useState } from 'react';
-import { StyleSheet, View, Animated, TouchableOpacity } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-
+import React from 'react';
+import { Image, StyleSheet, View } from 'react-native';
 
 export const HomeScreen = () => {
-	const [fadeIn] = React.useState(new Animated.Value(0));
-	const [FadeInSlow] = React.useState(new Animated.Value(0));
-	React.useEffect(() => {
-		Animated.timing(fadeIn,	{
-				toValue: 1,
-				duration: 4000
-			}).start();
-
-			Animated.timing(FadeInSlow, {
-				toValue: 1,
-				duration: 5500
-			}).start();
-	});
 	return (
 		<Layout style={styles.layout}>
 			<View style={styles.centerContent}>
-				<Animated.Text style={{ opacity:fadeIn,
-						fontSize: 35,
-						paddingTop: 10,
-						marginTop: -95,
-						paddingLeft: 10,
-						paddingRight: 20,
-						paddingBottom: 30,
-						textAlign: 'left',
-						color: 'white',
-				}}>LA TIENDA DE LA ABUELA</Animated.Text>
-				<Animated.Text category='h3' style={{
-					opacity:FadeInSlow,
-					fontSize: 25,
-						paddingTop: 10,
-						marginTop: 5,
-						paddingLeft: 10,
-						paddingRight: 20,
-						paddingBottom: 30,
-						textAlign: 'center',
-						color: 'white',
-
-				}}>
+				<Text style={styles.textStyle}>LA TIENDA DE LA ABUELA</Text>
+				<Image
+					style={styles.imgStyle}
+					source={require('../images/tiendabu.jpg')}
+				/>
+				<Text category='h3' style={{ textAlign: 'center' }}>
 					La mejor tienda para tu abuela
-				</Animated.Text>
+				</Text>
 			</View>
 		</Layout>
 	);
@@ -60,5 +29,13 @@ const styles = StyleSheet.create({
 		paddingRight: 20,
 		paddingBottom: 30,
 		textAlign: 'center',
+	},
+
+	imgStyle: {
+		width: 400,
+		height: 400,
+		margin: 'auto',
+		borderWidth: 20,
+		borderColor: 'white',
 	},
 });

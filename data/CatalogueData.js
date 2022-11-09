@@ -3,8 +3,7 @@ export const CatalogueData = [
 		name: 'Lechuga',
 		image: require('../images/Media.png'),
 		price: 4.5,
-		description:
-			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat eaque reprehenderit, repellat eveniet fugit tenetur recusandae ad distinctio, placeat unde hic! Optio voluptatem accusamus cupiditate laboriosam sunt vel quia velit?',
+		description:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat eaque reprehenderit, repellat eveniet fugit tenetur recusandae ad distinctio, placeat unde hic! Optio voluptatem accusamus cupiditate laboriosam sunt vel quia velit?',
 	},
 	{
 		name: 'Aromas',
@@ -13,7 +12,7 @@ export const CatalogueData = [
 		description: 'Pasta dental para el cuido personal y la salud dental',
 	},
 	{
-		name: '3 - Pack Gaseosas ',
+		name: 'Pack Gaseosas ',
 		image: require('../images/bebidas.png'),
 		price: 3.78,
 		description: 'Pasta dental para el cuido personal y la salud dental',

@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 //Screens
 import {
+	BienvenidaScreen,
 	CatalogoScreen,
 	HistorialScreen,
 	HomeScreen,
@@ -18,25 +19,20 @@ function Mtabs() {
 		<Tab.Navigator
 			initialRouteName='Home'
 			screenOptions={{
-				tabBarStyle: {
-					backgroundColor: '#00047E',
-					height: 100,
+				tabBarStyle:{
+					backgroundColor:'#00047E'
 				},
 				tabBarActiveTintColor: '#18FF03',
 				tabBarInactiveTintColor: 'white',
-				tabBarLabelStyle:{
-					fontSize: 15,
-			},
 				headerShown: false,
 			}}
 		>
 			<Tab.Screen
 				name='Home'
-				component={HomeScreen}
+				component={BienvenidaScreen}
 				options={{
-					tabBarLabel: 'INICIO',
 					tabBarIcon: ({color}) => (
-							<Ionicons name="home" size={35} color={color} />
+						<Ionicons name='home-sharp' size={24} color={color} />
 					),
 				}}
 			/>
@@ -45,7 +41,7 @@ function Mtabs() {
 				component={CatalogueStack}
 				options={{
 					tabBarIcon: ({color}) => (
-						<Ionicons name='pricetags' size={35} color={color} />
+						<Ionicons name='pricetags' size={24} color={color} />
 					),
 				}}
 			/>
@@ -54,7 +50,7 @@ function Mtabs() {
 				component={HistorialScreen}
 				options={{
 					tabBarIcon: ({color}) => (
-						<Ionicons name='ios-newspaper' size={35} color={color} />
+						<Ionicons name='ios-newspaper' size={24} color={color} />
 					),
 				}}
 			/>
@@ -63,7 +59,7 @@ function Mtabs() {
 				component={PedidosScreen}
 				options={{
 					tabBarIcon: ({color}) => (
-						<Ionicons name='cart-sharp' size={35} color={color} />
+						<Ionicons name='cart-sharp' size={24} color={color} />
 					),
 				}}
 			/>
