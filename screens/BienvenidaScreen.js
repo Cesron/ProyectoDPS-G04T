@@ -16,12 +16,6 @@ export const BienvenidaScreen = ({ navigation }) => {
 				}}
 				source={require('../animations/bienvenida.json')}
 			/>
-			<Button
-				style={styles.button}
-				onPress={() => navigation.navigate('Login')}
-			>
-				¡Empezar!
-			</Button>
 		</Layout>
 	);
 };

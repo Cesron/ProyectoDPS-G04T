@@ -1,11 +1,6 @@
-import {
-	Autocomplete,
-	AutocompleteItem,
-	Button,
-	Layout,
-} from '@ui-kitten/components';
+import { Autocomplete, AutocompleteItem, Layout } from '@ui-kitten/components';
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import { Item } from '../components/Catalogue/Item';
 import { AutocompleteData } from '../data/AutocompleteData';
 
