@@ -62,10 +62,15 @@ const styles = StyleSheet.create({
 		color: '#C8CFE1',
 		fontSize: 25,
 	},
+	textCounter: {
+		color: '#fff',
+		fontWeight: 'bold',
+	},
 });
 
 export const ProductoScreen = () => {
 	const { productView, car, setCar } = useAuthContext();
+	const [counter = 5, setCounter] = React.useState(0);
 
 	return (
 		<>
@@ -76,6 +81,30 @@ export const ProductoScreen = () => {
 					<View style={styles.priceView}>
 						<Text style={styles.price}>{productView.price} </Text>
 						<Text style={styles.pricePieza}> $ / pieza</Text>
+						<View
+							style={{
+								flexDirection: 'row',
+								alignItems: 'center',
+								backgroundColor: '#3167FD',
+								marginLeft: 20,
+								borderRadius: 20,
+							}}
+						>
+							<Button
+								onPress={() => setCounter(counter - 1)}
+								style={{ borderRadius: 20 }}
+							>
+								-
+							</Button>
+
+							<Text style={styles.textCounter}> {counter} </Text>
+							<Button
+								onPress={() => setCounter(counter + 1)}
+								style={{ borderRadius: 20 }}
+							>
+								+
+							</Button>
+						</View>
 					</View>
 				</View>
 

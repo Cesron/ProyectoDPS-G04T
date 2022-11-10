@@ -5,6 +5,7 @@ import LoginStack from './components/LoginStack';
 import Navigation from './components/Navigation';
 import { AuthContext, AuthContextProvider } from './context/AuthContext';
 import { LoginScreen } from './screens';
+import { PerfilScreen } from './screens/PerfilScreen';
 
 export default function App() {
 	return (
