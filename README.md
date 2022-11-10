@@ -17,7 +17,7 @@ El proyecto consiste en solucionar la problematica de la compra de abarrotes y m
 
 - Mockups y diseños UIX: https://www.figma.com/file/FHTGH7oI8qtLUbayA26N3T/Untitled?node-id=0%3A1
 
-- Manual Técnico: https:https://www.canva.com/design/DAFRTsmsfMM/MN0NZNjB2Eo_Mkj187NHlw/edit?utm_content=DAFRTsmsfMM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+- Manual Técnico: https://www.canva.com/design/DAFRTsmsfMM/MN0NZNjB2Eo_Mkj187NHlw/edit?utm_content=DAFRTsmsfMM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 - Manual de Usuario:https://www.canva.com/design/DAFRUhitoYo/EgAXI1S1ROGY4II2KtZUaQ/edit?utm_content=DAFRUhitoYo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
