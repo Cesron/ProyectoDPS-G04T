@@ -18,6 +18,7 @@ El proyecto consiste en solucionar la problematica de la compra de abarrotes y m
 - TRELLO: https://trello.com/b/RCq0BbKm/tienda-para-la-abuela
 
 - Mockups y diseños UIX: https://www.figma.com/file/FHTGH7oI8qtLUbayA26N3T/Untitled?node-id=0%3A1
+- APK: https://drive.google.com/file/d/1AYZMpKKUcZ4xUEHN6dQRC15qND4hVD8I/view
 
 - Manual Técnico: https://www.canva.com/design/DAFRTsmsfMM/MN0NZNjB2Eo_Mkj187NHlw/edit?utm_content=DAFRTsmsfMM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
