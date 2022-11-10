@@ -3,27 +3,29 @@
 Grupo Teórico 04T
 
 Developer Team:
-- César Adilson Ayala Vásquez (Progrmador full stack)                  AV190068
-- Alejandro José Castillo Pacheco (Programador front End)              CP190719
-- Liliana Gisella Lopez Cáceres (Programadora tester)                  LC170104
-- Luis Ernesto Hernández Ramirez (Programador back End)                HR152213
-- Denilson Emmanuel Chávez Cruz (Scrum Master, Programador front End)  CC161302
+
+- César Adilson Ayala Vásquez (Progrmador full stack) AV190068
+- Alejandro José Castillo Pacheco (Programador front End) CP190719
+- Liliana Gisella Lopez Cáceres (Programadora tester) LC170104
+- Luis Ernesto Hernández Ramirez (Programador back End) HR152213
+- Denilson Emmanuel Chávez Cruz (Scrum Master, Programador front End) CC161302
 
 TIENDA PARA LA ABUELA
 El proyecto consiste en solucionar la problematica de la compra de abarrotes y minimizar el tiempo en tienda, también reduciría el porcenteja de error humano al momento de hacer compras.
 
 -- Links de Zona de trabajo.
-- TRELLO:https://trello.com/b/RCq0BbKm/tienda-para-la-abuela
+
+- TRELLO: https://trello.com/b/RCq0BbKm/tienda-para-la-abuela
 
 - Mockups y diseños UIX: https://www.figma.com/file/FHTGH7oI8qtLUbayA26N3T/Untitled?node-id=0%3A1
 
-- Manual Técnico: https:https://www.canva.com/design/DAFRTsmsfMM/MN0NZNjB2Eo_Mkj187NHlw/edit?utm_content=DAFRTsmsfMM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+- Manual Técnico: https://www.canva.com/design/DAFPQ8PKo8A/PckDLerHT7NPQ48X-dg4Ag/view?utm_content=DAFPQ8PKo8A&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu
 
-- Manual de Usuario:https://www.canva.com/design/DAFRUhitoYo/EgAXI1S1ROGY4II2KtZUaQ/edit?utm_content=DAFRUhitoYo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+- Manual de Usuario: https://www.canva.com/design/DAFPRL7fqeA/w3lfzPeKNIre_HsEacTXSg/view?utm_content=DAFPRL7fqeA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
 
 - Video Presentación: https://drive.google.com/file/d/1U6zDeMkSvKkNTuO1KlrZr7RkXaiE-HA5/view?usp=sharing
 
-Licencias Creative Commons: 
+Licencias Creative Commons:
 
 Este Proyecto está bajo la licecia Atribución-CompartirIgual 4.0 Internacional (CC - BY - SA) Que establece:
 Usted es libre de:
