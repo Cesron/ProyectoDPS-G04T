@@ -1,9 +1,9 @@
-import { Avatar, Text } from '@ui-kitten/components';
+import { Avatar, Button, Text } from '@ui-kitten/components';
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { useAuthContext } from '../context/AuthContext';
 
-export const PedidosScreen = () => {
+export const PedidosScreen = ({ navigation }) => {
 	const { car } = useAuthContext();
 
 	return (
@@ -30,9 +30,9 @@ export const PedidosScreen = () => {
 						</View>
 					))}
 					<View style={styles.contenedorBtn}>
-						<TouchableOpacity style={styles.boton}>
+						<Button onPress={() => navigation.navigate('CarritoScreen')}>
 							<Text style={styles.etiquetaBtn}>Realizar pedido</Text>
-						</TouchableOpacity>
+						</Button>
 					</View>
 				</>
 			) : (

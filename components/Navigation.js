@@ -11,6 +11,7 @@ import {
 	PedidosScreen,
 } from '../screens';
 import CatalogueStack from './CatalogueStack';
+import PedidosStack from './PedidosStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -52,7 +53,7 @@ function Mtabs() {
 			/>
 			<Tab.Screen
 				name='Pedidos'
-				component={PedidosScreen}
+				component={PedidosStack}
 				options={{
 					tabBarIcon: ({}) => (
 						<Ionicons name='cart-sharp' size={24} color='black' />

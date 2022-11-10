@@ -7,3 +7,4 @@ export * from './HomeScreen';
 export * from './LoginScreen';
 export * from './PedidosScreen';
 export * from './ProductoScreen';
+export * from './CarritoScreen';

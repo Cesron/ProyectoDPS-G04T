@@ -9,6 +9,12 @@ const styles = StyleSheet.create({
 		textAlign: 'center',
 		fontWeight: 'bold',
 	},
+	layout: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		padding: 20,
+	},
 
 	titleContainer: {
 		backgroundColor: '#2F3B5D',
@@ -52,7 +58,7 @@ const styles = StyleSheet.create({
 
 export const CarritoScreen = () => {
 	return (
-		<Layout sx={{ height: 1000 }}>
+		<Layout style={styles.layout}>
 			<View sx={{ backgroundColor: 'red' }}>
 				<View style={styles.titleContainer}>
 					<Text style={styles.title}>Confirmacion de pedido</Text>
@@ -80,14 +86,16 @@ export const CarritoScreen = () => {
 						<Text style={styles.info}> Recoger en tienda </Text>
 					</View>
 				</View>
-				<View sx={{ height: 500, alignItems: 'center' }}>
+				<View
+					sx={{ height: 500, alignItems: 'center', marginHorizontal: 'auto' }}
+				>
 					<View>
 						<Text>Este es el total a pagar: </Text>
 					</View>
 					<View>
 						<Text>$22.83</Text>
 					</View>
-					<Button style={styles.button}>Agregar al Carrito</Button>
+					<Button style={styles.button}>Confirmar</Button>
 				</View>
 			</View>
 		</Layout>
